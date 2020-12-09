@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.CityMapper">
+  <select id="selectCity" resultType="com.example.demo.City">
+    select * from City where state = #{state}
+  </select>
+  <insert id="insertCity" parameterType="com.example.demo.City">
+  insert into City (id,state,name)
+  values(
+       #{id},
+       #{state},
+       #{name}
+  )
+  </insert>
+</mapper>
